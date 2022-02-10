@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+import {TextFieldModule} from '@angular/cdk/text-field';
 import '@material/textfield';
 import  '@material/ripple';
 import { Router, RouterModule } from '@angular/router';
@@ -12,10 +16,15 @@ import { Router, RouterModule } from '@angular/router';
 export class AppComponent {
   title = 'First-App';
   constructor( private router:Router){}
+  firstNameAutofilled:any;
+  lastNameAutofilled: any;
 
   Savefunction(){
     console.log('hello world');
-    this.router.navigate(['/Dashboard']);
+    this.router.navigate(['/dashboard']);
+  }
+  Newuser(){
+    this.router.navigate(['/employee']);
   }
   
 }

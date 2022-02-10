@@ -1,35 +1,60 @@
-<div class="mdc-data-table">
-    <legend>Dashboard</legend>
-    <div class="mdc-data-table__table-container">
-      <table class="mdc-data-table__table" aria-label="Userinformation">
-        <thead>
-          <tr class="mdc-data-table__header-row">
-            <th class="mdc-data-table__header-cell" role="columnheader" scope="col">UserName</th>
-            <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">Mail Address</th>       
-        </tr>
+<div class="demo-button-container">
+  <mat-toolbar color="warn">
+    <mat-icon>
+      <span>admin_panel_settings</span>
+    </mat-icon>
+    <span class="fill-remaining-space"></span>
+    <span>DashBoard</span>
+    <span class="fill-remaining-space"></span>
+   </mat-toolbar><br>
+  <button  mat-raised-button color="primary" mat-raised-button (click)="addData()" class="demo-button">
+    Add data
+  </button>
+  <button
+  mat-raised-button color="warn"
+      mat-raised-button
+      [disabled]="!dataSource.length"
+      (click)="removeData()"
+      class="demo-button">
+    Remove data
+  </button>
+</div><br>
 
-          
-        </thead>
-        <tbody class="mdc-data-table__content">
-          <tr class="mdc-data-table__row">
-            <th class="mdc-data-table__cell" scope="row">Suresh</th>
-            <td class="mdc-data-table__cell mdc-data-table__cell--numeric">Suresh@gmail.com</td>
-            <button style="margin:5px;">Edit</button>
-            <button>Delete</button>
-          </tr>
-          <tr class="mdc-data-table__row">
-            <th class="mdc-data-table__cell" scope="row">Satish</th>
-            <td class="mdc-data-table__cell mdc-data-table__cell--numeric">Satish@gmail.com</td>
-            <button style="margin:5px;">Edit</button>
-            <button>Delete</button>
-          </tr>
-          <tr class="mdc-data-table__row">
-            <th class="mdc-data-table__cell" scope="row">Mohan</th>
-            <td class="mdc-data-table__cell mdc-data-table__cell--numeric">Mohan@gmail.com</td>
-            <button style="margin:5px;">Edit</button>
-            <button>Delete</button>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="weight">
+    <th mat-header-cell *matHeaderCellDef> Mailid </th>
+    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="symbol">
+    <th mat-header-cell *matHeaderCellDef> VM </th>
+    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-toolbar color="warn">
+  <span class="fill-remaining-space"></span>
+  <span>*******</span>
+  <span class="fill-remaining-space"></span>
+ </mat-toolbar>
+

@@ -1,11 +1,10 @@
-legend{
-    background:rgb(183, 207, 77);
-}
-button{
-    color: brown;
-    animation: backwards;
-}
-table{
-    border-color:rgb(196, 76, 112);
-    
-}
+table {
+    width: 100%;
+  }
+  demo-button-container {
+    padding-bottom: 16px;
+  }
+  
+  .demo-button + .demo-button {
+    margin-left: 8px;
+  }
