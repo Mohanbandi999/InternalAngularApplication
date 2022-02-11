@@ -21,7 +21,7 @@ export class AppComponent {
 
   Savefunction(){
     console.log('hello world');
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/login']);
   }
   Newuser(){
     this.router.navigate(['/employee']);

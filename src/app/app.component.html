@@ -1,55 +1,17 @@
 <div class="container">
-     <mat-toolbar color="primary">
-     <span class="fill-remaining-space"></span>
-     <span>Softblobs Employee Information</span>
-     <span class="fill-remaining-space"></span>
-    </mat-toolbar>
-
-
-    <legend>
-      <mat-icon>
-        <span>account_circle</span>
-      </mat-icon>
-      Login      
-    </legend><br>
-  
-    
-    
-      <mat-form-field appearance="fill">
-        <mat-label>User Name</mat-label>
-        <input matInput (cdkAutofill)="firstNameAutofilled = $event.isAutofilled">
-        <mat-hint *ngIf="firstNameAutofilled">Autofilled!</mat-hint>
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Password</mat-label>
-        <input matInput (cdkAutofill)="lastNameAutofilled = $event.isAutofilled">
-        <mat-hint *ngIf="lastNameAutofilled">Autofilled!</mat-hint>
-      </mat-form-field><br>
-      
-      
-
-   
-    <button style="margin:10px;" (click)="Savefunction()" class="Savetouch">
-      <span class="mdc-button__ripple"></span>
-      <span class="mdc-button__touch"></span>
-      <span class="mdc-button__label">Login</span>
-    </button>
-  
-  
-     <button style="margin:10px;" class="mdc-button mdc-button--outlined">
-        <span class="mdc-button__ripple"></span>
-        <span class="mdc-button__label">Cancel</span>
-     </button> 
-
-     <button (click)="Newuser()" class="mdc-button mdc-button--outlined">
-      <span class="mdc-button__ripple"></span>
-      <span class="mdc-button__label">New User</span>
-   </button>    
-   
-      <mat-toolbar color="primary">
-        <span class="fill-remaining-space"></span>
-        <span>************</span>
-        <span class="fill-remaining-space"></span>
-      </mat-toolbar>
-    </div>
+  <mat-toolbar color="primary">
+     <div>Softblobs Employee Information</div>
+     <div>
+      <button style="margin:10px;" (click)="Savefunction()" class="Savetouch" mat-raised-button color="accent" mat-raised-button >
+        Login
+      </button>
+     </div>
+     <div>
+      <button style="margin:10px;" (click)="Newuser()" class="Savetouch" mat-raised-button color="accent" mat-raised-button >
+        New User
+      </button>
+     </div>
+  </mat-toolbar>
+ </div>
 <router-outlet></router-outlet>
+

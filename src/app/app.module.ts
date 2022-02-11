@@ -21,11 +21,13 @@ import { EmployeeService } from './shared/employee.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'employees', component: EmployeesComponent},
-  {path:'employee', component:EmployeeComponent}
+  {path:'employee', component:EmployeeComponent},
+  {path:'login', component:LoginComponent}
   ];
 
 @NgModule({  
@@ -33,7 +35,8 @@ const routes: Routes = [
     AppComponent,
     DashboardComponent,
     EmployeesComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    LoginComponent
     
   ],
   imports: [
