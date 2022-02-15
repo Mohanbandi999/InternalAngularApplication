@@ -22,11 +22,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
 import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'employees', component: EmployeesComponent},
-  {path:'employee', component:EmployeeComponent},
+  { path:'employee', component:EmployeeComponent},
   {path:'login', component:LoginComponent}
   ];
 
@@ -54,7 +56,11 @@ const routes: Routes = [
     ReactiveFormsModule,
     MatGridListModule,
 
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+
+    
+    
     
   ],
   providers: [EmployeeService],
