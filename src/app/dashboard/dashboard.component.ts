@@ -12,4 +12,13 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  username="mohan";
+  usernameone="siva";
+
+  sayHello(){
+    console.log("say hello from dashboard component")
+  }
+  
+
+
 }

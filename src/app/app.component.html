@@ -1,35 +1,11 @@
-<form action="">
-    <legend>Login</legend>
-    <fieldset>
-      
-      <div class='field-filled'>
-        <input type="text" class="input" required>
-        <label for="" class="label">UserName</label>
-        <span class="line"></span>
-      </div>
-    </fieldset>
-    
-      <div class='field-outlined'>
-        <input type="text" class="input" required>
-        <label for="" class="label">Password</label>
-        <span class="line"></span>
-      </div><br>
-    
-      
-      
-        <button style="margin:10px;" (click)="Savefunction()" class="Savetouch">
-          <span class="mdc-button__ripple"></span>
-          <span class="mdc-button__touch"></span>
-          <span class="mdc-button__label">Login</span>
-        </button>
-      
+<div class="container">
 
-      
-        <button class="mdc-button mdc-button--outlined">
-            <span class="mdc-button__ripple"></span>
-            <span class="mdc-button__label">Cancel</span>
-        </button>
-              
-  </form>
+  <button class="buttn-right" mat-button (click)="toHome()" >Home</button>
+  <button mat-button class="buttn-right" >Service</button>
+  <button class="buttn-right" mat-button  (click)="toDashboard()">Dashboard</button>
+ 
+      <router-outlet></router-outlet>
+   
+  </div>
 
-  <router-outlet></router-outlet>
+
